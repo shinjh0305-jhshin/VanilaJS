@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
     <title>데이터 유효성 검사</title>
 </head>
 <body>
-    test remote change.
+    <div class="container">
+        <form class="form" id="form">
+            <h2>Register with Us</h2>
+            <div class="form-control">
+                <label for="Username">Username</label>
+                <input type="text" id="Username" placeholder="Enter Username">
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="Email">Email</label>
+                <input type="text" id="Email" placeholder="Enter email">
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="Password">Password</label>
+                <input type="password" id="Password" placeholder="Enter password">
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="ConfirmPassword">Confirm Password</label>
+                <input type="password" id="ConfirmPassword" placeholder="Enter password again">
+                <small>Error message</small>
+            </div>
+            <button type="submit">Submit</button>
+        </form>        
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
