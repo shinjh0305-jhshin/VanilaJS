@@ -1,5 +1,5 @@
-# Vanila-JS
-Vanila JS without Frameworks
+# VanilaJS
+VanilaJS without Frameworks
 
 No. | Project Title | Details 
 ---|---|---|
