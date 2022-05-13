@@ -6,6 +6,8 @@ const notification = document.getElementById('notification-container');
 const finalMessage = document.getElementById('final-message');
 const finalMessageRevealWord = document.getElementById('final-message-reveal-word');
 const figureParts = document.querySelectorAll('.figure-part');
+const hint = document.querySelector('.hint.unreveal');
+const definition = document.querySelector('.definition');
 
 const words = ['association', 'steak', 'suggestion', 'poet', 'nation', 'department', 'estate', 'response', 'assumption', 'leader', 'baseball', 
 'drawer', 'city', 'wealth', 'disease', 'membership', 'client', 'person', 'error', 'friendship', 'definition', 'alcohol', 'advertising', 'strategy', 
@@ -30,9 +32,11 @@ playAgain.addEventListener('click', () => {
     
     popup.style.display = 'none';
 
-    figureParts.forEach(parts => {
+    figureParts.forEach(parts => { //행맨 몸체 전부 삭제
         parts.style.display = 'none';
     })
+    hint.classList.add('unreveal');
+    definition.innerText = '';
 })
 
 function displayWord() {
@@ -44,7 +48,7 @@ function displayWord() {
     const innerWord = word.innerText.replace(/[ \n]/g, '')
     if(innerWord == selectedWord) {
         finalMessage.innerText = 'Congratulations! You won! 😃';
-        //finalMessageRevealWord.innerText = `Answer : ${selectedWord} `
+        finalMessageRevealWord.innerText = `...the word was: ${selectedWord}`;
         popup.style.display = 'flex';
         playable = false; //문자열 입력 무시.
     }
@@ -61,6 +65,10 @@ function displayWrongLetter() {
     figureParts.forEach((figure, index) => { //행맨의 신체부위를 하나씩 오픈한다.
         if (index < wrongWords) figure.style.display = 'block';
     })
+
+    if(wrongWords === 4) { //힌트를 오픈한다.
+        hint.classList.remove('unreveal');
+    }
 
     if(wrongWords === figureParts.length) {
         finalMessage.innerText = 'Unfortunately you lost. 😕';
@@ -102,6 +110,17 @@ window.addEventListener('keydown', e => { //전역에 이벤트 핸들러를 등
             }
         }
     }
+})
+
+hint.addEventListener('click', () => {
+    if(hint.classList.contains('unreveal')) return; //공개 안 되는 상태면 바로 나간다.
+     
+    fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${selectedWord}`)
+        .then(response => response.json())
+        .then(response => {
+            definition.innerText = response[0].meanings[0].definitions[0].definition;
+        })
+
 })
 
 displayWord();

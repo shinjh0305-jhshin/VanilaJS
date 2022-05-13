@@ -128,3 +128,25 @@
   .notification-container.show {
     transform: translateY(-50px);
   }
+
+  .hint {
+    position: relative;
+    top: -60px;
+    width: 120px;
+    height: 40px;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: #0b0bef;
+    color: white;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer
+  }
+  .hint.unreveal {
+    background-color: darkgrey;
+    cursor: not-allowed;
+  }
+  .hint[class = "hint"]:active {
+    background-color: #f9e000;
+    color: black;
+  }
