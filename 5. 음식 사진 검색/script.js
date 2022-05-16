@@ -43,6 +43,7 @@ function searchMeal(e) {
 function getRandomMeal() {
     queryResult.replaceChildren(); //검색 결과 텍스트를 지운다.
     meals.replaceChildren(); //이전에 검색한 레시피를 지운다.
+    search.value = '';
 
     fetch('https://www.themealdb.com/api/json/v1/1/random.php')
         .then(response => response.json())
