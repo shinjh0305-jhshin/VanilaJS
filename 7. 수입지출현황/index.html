@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <title>수입지출현황</title>
+</head>
+<body>
+    <h2>2022 여름여행 수입지출현황</h2>
+    <div class="container">
+        <h4>Your Balance</h4>
+        <h1 id="balance">￦0</h1>
+
+        <div class="inc-exp-container">
+            <div>
+                <h4>수입</h4>
+                <p id="money_plus" class="money plus">￦0</p>
+            </div>
+            <div>
+                <h4>지출</h4>
+                <p id="money_minus" class="money minus">￦0</p>
+            </div>
+        </div>
+
+        <h3>상세내역</h3>
+        <ul id="list" class="list">
+            <!-- <li class="minus">
+                항공료 <span>-￦400,000</span><button class="delete-btn">x</button>
+            </li> -->
+
+
+        </ul>
+
+        <h3>항목 추가</h3>
+        <form id="form">
+            <div class="form-control">
+                <label for="Text">항목명</label>
+                <input type="text" id="Text" placeholder="항목명을 입력하세요">
+            </div>
+            <div class="form-control">
+                <label for="Amount">금액<br>(음수-지출, 양수-수입)</label>
+                <input type="number" id="Amount" placeholder="금액을 입력하세요">
+            </div>
+            <button type="submit" class="btn">저장</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
