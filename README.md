@@ -9,3 +9,4 @@ No. | Project Title | Details
 4 | [행맨](https://github.com/shinjh0305-jhshin/VanilaJS/tree/main/4.%20%ED%96%89%EB%A7%A8) | 행맨 게임 프로그램
 5 | [음식 사진 검색](https://github.com/shinjh0305-jhshin/VanilaJS/tree/main/5.%20%EC%9D%8C%EC%8B%9D%20%EC%82%AC%EC%A7%84%20%EA%B2%80%EC%83%89) | API를 이용한 쿼리, 랜덤 데이터 검색
 6 | [메뉴 슬라이더 및 모달 창](https://github.com/shinjh0305-jhshin/VanilaJS/tree/main/6.%20%EB%A9%94%EB%89%B4%20%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%8D%94%20%EB%B0%8F%20%EB%AA%A8%EB%8B%AC%20%EC%B0%BD) | 클릭 영역 설정으로 창 열고 닫기
+7 | [수입 지출 현황](https://github.com/shinjh0305-jhshin/VanilaJS/tree/main/7.%20%EC%88%98%EC%9E%85%EC%A7%80%EC%B6%9C%ED%98%84%ED%99%A9) | 로컬 스토리지를 이용한 정보 저장
