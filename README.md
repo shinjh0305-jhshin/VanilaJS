@@ -11,3 +11,4 @@ No. | Project Title | Details
 6 | [메뉴 슬라이더 및 모달 창](https://github.com/shinjh0305-jhshin/VanilaJS/tree/main/6.%20%EB%A9%94%EB%89%B4%20%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%8D%94%20%EB%B0%8F%20%EB%AA%A8%EB%8B%AC%20%EC%B0%BD) | 클릭 영역 설정으로 창 열고 닫기
 7 | [수입 지출 현황](https://github.com/shinjh0305-jhshin/VanilaJS/tree/main/7.%20%EC%88%98%EC%9E%85%EC%A7%80%EC%B6%9C%ED%98%84%ED%99%A9) | 로컬 스토리지를 이용한 정보 저장
 8 | [음악 재생기](https://github.com/shinjh0305-jhshin/VanilaJS/tree/main/8.%20%EC%9D%8C%EC%95%85%20%EC%9E%AC%EC%83%9D%EA%B8%B0) | Audio API를 이용한 음악 재생기
+9 | [무한 스크롤](https://github.com/shinjh0305-jhshin/VanilaJS/tree/main/9.%20%EB%AC%B4%ED%95%9C%20%EC%8A%A4%ED%81%AC%EB%A1%A4) | 웹 페이지에 끝에 도달하면 계속 새로운 정보 생성
