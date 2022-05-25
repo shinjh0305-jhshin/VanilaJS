@@ -11,7 +11,7 @@ html, body {
 body {
   background: #ffefea;
   font-family: 'Noto Sans KR', sans-serif;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   margin: 0;
 }
 
@@ -69,13 +69,11 @@ select:focus {
 }
 
 .dark {
-    width: 100vw;
-    min-height: 100vh;
-    overflow-y: scroll;
-    z-index: 0;
+    width: 100%;
+    height: 100%;
     background-color: black;
     opacity: 0.6;
-    position: absolute;
+    position: fixed;
     transition: all 0.3s ease-in-out;
 }
 

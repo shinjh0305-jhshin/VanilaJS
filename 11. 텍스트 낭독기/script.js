@@ -2,6 +2,10 @@ const btn = document.getElementById('toggle');
 const box = document.getElementById('text-box');
 const main = document.querySelector('main');
 const background = document.querySelector('.background');
+const voicesList = document.getElementById('voices');
+const closeBtn = document.getElementById('close');
+const readBtn = document.getElementById('read');
+const textarea = document.getElementById('text');
 
 let voices = [];
 const message = new SpeechSynthesisUtterance();
@@ -97,12 +101,42 @@ function speakMessage() { //음성 출력
     speechSynthesis.speak(message);
 }
 
-function getVoices() {
+function getVoices() { //음성 리스트를 가져와서 텍스트 입력기에 넣는다.
     voices = speechSynthesis.getVoices();
-    console.log(voices);
+   
+    const fragment = document.createDocumentFragment();
+    
+    voices.forEach(voice => {
+        const option = document.createElement('option');
+        option.value = voice.name;
+        option.innerText = `${voice.name} ${voice.lang}`
+
+        if (voice.lang === "ko-KR" && voice.localService === false) { //기본 목소리를 더 이쁜 목소리로 바꾼다.
+            message.voice = voice;
+            option.setAttribute("selected", "");
+        }
+
+        fragment.appendChild(option);
+    })
+
+    voicesList.appendChild(fragment);
 }
 
-btn.onclick = function() {
+closeBtn.addEventListener('click', () => { //텍스트 입력기 창 닫기
+    box.classList.remove('show');
+    background.classList.remove('dark');
+})
+
+readBtn.addEventListener('click', () => { //텍스트 입력기의 텍스트 읽기
+    setTextMessage(textarea.value);
+    speakMessage();
+})
+
+voicesList.addEventListener('change', (e) => { //음성 변경
+    message.voice = voices.find(voice => voice.name === e.target.value);
+})
+
+btn.onclick = function() { //텍스트 입력기를 보여준다.
     box.classList.add('show');
     background.classList.add('dark');
 }
@@ -111,4 +145,4 @@ btn.onclick = function() {
 //voice 리스트가 바뀌면 호출되는 함수다.
 speechSynthesis.addEventListener('voiceschanged', getVoices);
 
-getVoices();
+//getVoices();
