@@ -13,3 +13,4 @@ No. | Project Title | Details
 8 | [음악 재생기](https://github.com/shinjh0305-jhshin/VanilaJS/tree/main/8.%20%EC%9D%8C%EC%95%85%20%EC%9E%AC%EC%83%9D%EA%B8%B0) | Audio API를 이용한 음악 재생기
 9 | [무한 스크롤](https://github.com/shinjh0305-jhshin/VanilaJS/tree/main/9.%20%EB%AC%B4%ED%95%9C%20%EC%8A%A4%ED%81%AC%EB%A1%A4) | 웹 페이지에 끝에 도달하면 계속 새로운 정보 생성
 10 | [타자연습](https://github.com/shinjh0305-jhshin/VanilaJS/tree/main/10.%20%ED%83%80%EC%9E%90%EC%97%B0%EC%8A%B5) | 난이도에 따라 제한시간이 다른 타자연습
+11 | [텍스트 낭독기](https://github.com/shinjh0305-jhshin/VanilaJS/tree/main/11.%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%82%AD%EB%8F%85%EA%B8%B0) | Web Speech API를 이용한 텍스트 낭독기
